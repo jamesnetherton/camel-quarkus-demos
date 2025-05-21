@@ -12,7 +12,8 @@ import static org.hamcrest.Matchers.matchesPattern;
 class JolokiaEndpointTest {
     @Test
     void jolokiaConfiguration() {
-        RestAssured.get("/q/jolokia")
+        RestAssured.port = 8778;
+        RestAssured.get("/jolokia/")
                 .then()
                 .statusCode(200)
                 .body(
