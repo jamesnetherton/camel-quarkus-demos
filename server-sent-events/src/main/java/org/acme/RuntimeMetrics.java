@@ -1,15 +1,18 @@
 package org.acme;
 
+import io.quarkus.runtime.annotations.RegisterForReflection;
+
 import java.time.Instant;
 
+@RegisterForReflection
 public class RuntimeMetrics {
     private final double memoryUsed;
-    private final long openFileDescriptors;
-    private final String processCpuUsage;
-    private final String systemCpuUsage;
+    private final double openFileDescriptors;
+    private final double processCpuUsage;
+    private final double systemCpuUsage;
     private final long timestamp = Instant.now().toEpochMilli();
 
-    public RuntimeMetrics(double memoryUsed, long openFileDescriptors, String processCpuUsage, String systemCpuUsage) {
+    public RuntimeMetrics(double memoryUsed, double openFileDescriptors, double processCpuUsage, double systemCpuUsage) {
         this.memoryUsed = memoryUsed;
         this.openFileDescriptors = openFileDescriptors;
         this.processCpuUsage = processCpuUsage;
@@ -20,15 +23,15 @@ public class RuntimeMetrics {
         return memoryUsed;
     }
 
-    public long getOpenFileDescriptors() {
+    public double getOpenFileDescriptors() {
         return openFileDescriptors;
     }
 
-    public String getProcessCpuUsage() {
+    public double getProcessCpuUsage() {
         return processCpuUsage;
     }
 
-    public String getSystemCpuUsage() {
+    public double getSystemCpuUsage() {
         return systemCpuUsage;
     }
 

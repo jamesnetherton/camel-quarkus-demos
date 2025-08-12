@@ -62,7 +62,7 @@ function createChart(elementId, title, yAxisTitle, color, borderColor) {
     );
 }
 
-const memoryFreeChart = createChart('memory-used', 'OS Memory Used (MB)', 'MB', 'rgba(153, 204, 255, 0.2)', 'rgba(153, 204, 255, 1)');
+const memoryFreeChart = createChart('memory-used', 'JVM Metaspace Used (MB)', 'MB', 'rgba(153, 204, 255, 0.2)', 'rgba(153, 204, 255, 1)');
 const fileDescriptorsChart = createChart('file-descriptors', 'Open File Descriptors', 'Open File Descriptors', 'rgba(255, 99, 132, 0.2)', 'rgba(255, 99, 132, 1)');
 const processCpuUsageChart = createChart('process-cpu-usage', 'Process CPU %', 'CPU %', 'rgb(204, 255, 204, 0.2)', 'rgb(204, 255, 204, 1)');
 const systemCpuUsageChart = createChart('system-cpu-usage', 'System CPU %', 'CPU %', 'rgb(255, 204, 255, 0.2)', 'rgb(255, 204, 255, 1)');

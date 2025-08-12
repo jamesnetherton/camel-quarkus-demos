@@ -34,8 +34,6 @@ public class RuntimeMetricsTest {
                     assertNotNull(runtimeMetrics);
                     assertTrue(runtimeMetrics.getMemoryUsed() > 0);
                     assertTrue(runtimeMetrics.getOpenFileDescriptors() > 0);
-                    assertNotNull(runtimeMetrics.getProcessCpuUsage());
-                    assertNotNull(runtimeMetrics.getSystemCpuUsage());
                     assertTrue(runtimeMetrics.getTimestamp() > 0);
                     latch.countDown();
                 });
